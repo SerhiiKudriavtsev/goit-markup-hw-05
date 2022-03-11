@@ -48,7 +48,7 @@
         <section class=" overlay section-hero">
             <div class="hero container ">
                 <h1>Эффективные решения <br/> для вашего бизнеса</h1>
-                <button type="button">Заказать услугу</button>
+                <button type="button" data-modal-open>Заказать услугу</button>
             </div>
         </section>
         <!--Приоритеты в работе-->
@@ -116,9 +116,24 @@
             <div class="container">
                 <h2>Чем мы занимаемся</h2>
                 <ul class="doing">
-                    <li><img src="./images/img1.jpg" alt="Руки на клавиатуре" width="370"></li>
-                    <li><img src="./images/img2.jpg" alt="В руках телефон" width="370"></li>
-                    <li><img src="./images/img3.jpg" alt="В руках планшет" width="370"></li>
+                    <li class="doing-link">
+                        <div class="thumb">
+                            <img src="./images/img1.jpg" alt="Руки на клавиатуре" width="370px">
+                            <h3 class="label">Десктопные приложения</h3>
+                        </div>
+                    </li>
+                    <li class="doing-link">
+                        <div class="thumb">
+                            <img src="./images/img2.jpg" alt="В руках телефон" width="370">
+                            <h3 class="label">Мобильные приложения</h3>
+                        </div>
+                    </li>
+                    <li class="doing-link">
+                        <div class="thumb">
+                            <img src="./images/img3.jpg" alt="В руках планшет" width="370">
+                            <h3 class="label">Дизайнерские решения</h3>
+                        </div>
+                    </li>
                 </ul>
             </div>
         </section>
@@ -380,6 +395,18 @@
                 </ul>
             </div>
         </div>
-    </footer>    
+    </footer>   
+    <div class="backdrop is-hidden" data-modal>
+        <div class="modal">
+            <a href="" class="modal-a" data-modal-close>
+                <div class="modal-close">
+                    <svg class="close-cross">
+                        <use href="./images/sprite.svg#cross"></use>
+                    </svg>
+                </div>
+            </a>
+        </div>
+    </div> 
+    <script src="./js/modal.js"></script>
 </body>
 </html>
