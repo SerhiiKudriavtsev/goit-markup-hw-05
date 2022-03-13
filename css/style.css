@@ -388,6 +388,7 @@ p {
   align-items: center;
   cursor: pointer;
   fill: var(--socialNetworks-icon-color);
+  transition: 250ms var(--timing-function);
 }
 
 .team-social-networks li + li {
@@ -397,7 +398,7 @@ p {
 .social-networks-icon {
   max-width: 20px;
   max-height: 20px;
-  transition: 250ms var(--timing-function);
+  /* transition: 250ms var(--timing-function); */
 }
 .team-social-networks a:hover,
 .team-social-networks a:focus {
@@ -415,9 +416,9 @@ p {
   display: flex;
 }
 
-.client-item {
-  width: 170px;
-  height: 92px;
+.client-list li {
+  /* width: 170px;
+  height: 92px; */
   border: 1px solid var(--socialNetworks-icon-color);
   border-radius: 4px;
   display: flex;
@@ -426,10 +427,13 @@ p {
   transition: 250ms var(--timing-function);
 }
 
-.client-item:hover svg,
-.client-item:focus svg {
-  border: 1px solid var(--accent-color);
-  border-radius: 4px;
+.client-list li:hover,
+.client-list li:focus {
+  border-color: var(--accent-color);
+}
+.client-list li:hover svg,
+.client-list li:focus svg {
+  border-color: var(--accent-color);
   fill: var(--accent-color);
 }
 
@@ -441,12 +445,9 @@ p {
   width: 170px;
   height: 92px;
   fill: var(--socialNetworks-icon-color);
+  transition: 250ms var(--timing-function);
 }
 
-.client-icon:hover,
-.client-icon:focus {
-  fill: var(--accent-color);
-}
 /*===== Футер ======*/
 .footer {
   font-weight: 400;
@@ -667,6 +668,7 @@ card:focus {
   transform: translateY(0);
 }
 
+/* ======Modal window====== */
 .backdrop {
   position: fixed;
   top: 0;
@@ -674,6 +676,7 @@ card:focus {
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.2);
+  transition: 250ms var(--timing-function);
 }
 
 .backdrop.is-hidden {
