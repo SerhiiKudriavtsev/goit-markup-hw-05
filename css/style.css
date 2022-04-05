@@ -197,7 +197,7 @@ h1 {
   margin-bottom: 30px;
   min-width: 696px;
 }
-button {
+.button {
   color: var(--hero-text-color);
   background-color: var(--accent-color);
   font-family: Roboto, sans-serif;
@@ -214,8 +214,8 @@ button {
   transition: 250ms var(--timing-function);
 }
 
-button:hover,
-button:focus {
+.button:hover,
+.button:focus {
   background-color: var(--hero-buttom-hover-color);
 }
 
@@ -505,6 +505,7 @@ address li {
 
 .footer-social-networks {
   padding-top: 12px;
+  margin-right: 93px;
 }
 
 .footer h2 {
@@ -546,6 +547,52 @@ address li {
   width: 20px;
   height: 20px;
   fill: var(--background-color);
+}
+
+.footer-subscription {
+  padding-top: 12px;
+}
+
+.form-subscription {
+  display: flex;
+}
+
+.label-subscription input {
+  width: 358px;
+  height: 50px;
+  padding: 15px 16px;
+  margin-right: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 4px;
+  box-sizing: border-box;
+  background-color: var(--background-hero-footer-color);
+}
+
+.email-subscription {
+  font-size: 16px;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.footer-subscription-h {
+  margin-bottom: 20px;
+}
+
+.button-subscription {
+  display: flex;
+  border-width: 0;
+  padding: 10px 28px 10px 29px;
+}
+
+.button-subscription-text {
+  margin-right: 10px;
+}
+
+.button-subscription-icon {
+  width: 24px;
+  height: 24px;
+  position: relative;
+  top: 3px;
 }
 
 /*==========portfolio========== */
@@ -616,6 +663,7 @@ address li {
 .card {
   margin-bottom: 30px;
   background: var(--background-color);
+  transition: 250ms var(--timing-function);
 }
 
 .card-caption {
@@ -634,10 +682,9 @@ address li {
 }
 
 .card:hover,
-card:focus {
+.card:focus {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
-  transition: 250ms var(--timing-function);
 }
 
 .box {
@@ -664,7 +711,8 @@ card:focus {
   transition: 250ms var(--timing-function);
 }
 
-.card:hover .window-overlay {
+.card-a:hover .window-overlay,
+.card-a:focus .window-overlay {
   transform: translateY(0);
 }
 
@@ -692,6 +740,7 @@ card:focus {
   transform: translate(-50%, -50%);
   width: 528px;
   height: 581px;
+  padding: 40px;
   border-radius: 4px;
   background-color: #fff;
   box-shadow: 0 2px 1px rgba(0, 0, 0, 0.2), 0 1px 1px rgba(0, 0, 0, 0.14),
@@ -715,4 +764,174 @@ card:focus {
 .close-cross {
   width: 11px;
   height: 11px;
+  transition: 250ms var(--timing-function);
+}
+
+.modal-close:hover .close-cross,
+.modal-close:focus .close-cross {
+  fill: var(--accent-color);
+}
+
+.backdrop > .modal > h2 {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1.17;
+  text-align: center;
+  margin-top: 0px;
+  margin-bottom: 12px;
+}
+
+.form {
+  position: relative;
+  transition: 250ms var(--timing-function);
+}
+.form-imput {
+  padding: 12px 12px 12px 42px;
+  font-family: inherit;
+  width: 448px;
+  height: 40px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.01em;
+  transition: 250ms var(--timing-function);
+}
+
+/* .form-imput:hover,
+.form-imput:focus {
+  border: 1px solid var(--accent-color);
+  cursor: pointer;
+  fill: var(--accent-color);
+} */
+
+.form-label {
+  display: flex;
+  flex-direction: column;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.01em;
+  color: var(--parahraf-text-color);
+  margin-bottom: 10px;
+  position: relative;
+  transition: 250ms var(--timing-function);
+}
+
+.form-label-comment {
+  margin-bottom: 20px;
+}
+
+.form-comment::placeholder {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.01em;
+  color: rgba(117, 117, 117, 0.5);
+}
+
+.form-label:hover,
+.form-label:focus {
+  fill: var(--accent-color);
+  cursor: pointer;
+}
+
+.form-label:hover .form-imput,
+.form-label:focus .form-imput {
+  border: 1px solid var(--accent-color);
+  cursor: pointer;
+  fill: var(--accent-color);
+}
+
+.form-label:hover .form-comment,
+.form-label:focus .form-comment {
+  border: 1px solid var(--accent-color);
+  cursor: pointer;
+  fill: var(--accent-color);
+}
+
+.form-comment {
+  padding: 12px 16px;
+  width: 448px;
+  height: 120px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.01em;
+  color: rgba(117, 117, 117, 0.5);
+  background-color: #fff;
+  text-align: left;
+  display: flex;
+  vertical-align: top;
+  resize: none;
+  transition: 250ms var(--timing-function);
+}
+
+.form-icon {
+  width: 18px;
+  height: 18px;
+  position: absolute;
+  transform: translate(12px, 23px);
+}
+
+.form-label-check {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+  width: 32px;
+  height: 32px;
+  cursor: pointer;
+}
+
+.form-label-check-a {
+  color: var(--accent-color);
+  text-decoration: underline;
+}
+
+.checkbox,
+.form-icon-check {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.checkbox:checked + .form-check-empty {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.form-check-empty {
+  width: 16px;
+  height: 15px;
+  margin-right: 6px;
+}
+
+.checkbox:checked ~ .form-icon-check {
+  position: static;
+  width: 16px;
+  height: 15px;
+  overflow: visible;
+  margin-right: 7px;
+  clip: auto;
+}
+
+.button-check {
+  display: block;
+  margin: auto;
+  margin-top: 30px;
 }
